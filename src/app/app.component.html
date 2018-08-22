@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">Heroes</a>
+</nav>
+
+<h2 (click)="onClickMe()">Here are some links to help you start: </h2>
+
+<p *ngIf="showText">Hello Mr. Ram, I hope you are fine and doing great.</p>
+
+
+<router-outlet></router-outlet>

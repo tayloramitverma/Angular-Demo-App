@@ -1,0 +1,50 @@
+<p>
+  dashboard works!
+</p>
+<table class="table">
+	<tr><td>Name</td><td>Age</td><td>City</td></tr>
+  <tr *ngFor="let record of gusers" (click)="getUser(record.id)">
+  	<td>
+  		<span class="badge">{{record.name}}</span>
+	</td>
+  	<td>
+     {{record.age}}
+	</td>
+	<td>
+		{{record.city}}
+	</td>
+  </tr>
+</table>
+
+
+
+<div *ngIf="postdetail">
+<h2>{{postdetail.name | uppercase}} Details</h2>
+<table class="postdetail">
+	
+	<tr><td>Id</td><td>Name</td><td>Email</td><td>Phone</td><td>Website</td></tr>
+  <tr>
+  	<td width="10px">
+  		{{postdetail.id}}
+	</td>
+  	<td>
+     <input [(ngModel)]="postdetail.name" placeholder="name" />
+	</td>
+	<td>
+		<input [(ngModel)]="postdetail.age" placeholder="age" />
+	</td>
+	<td>
+		<input [(ngModel)]="postdetail.city" placeholder="city" />
+	</td>
+	<td>
+		<button (click)="updateUser()">save</button>
+	</td>
+  </tr>
+</table>
+</div>
+
+<div *ngIf="finalres">
+	<p>Name: {{finalres.name}}</p>
+	<p>Age: {{finalres.age}}</p>
+	<p>City: {{finalres.city}}</p>
+</div>
